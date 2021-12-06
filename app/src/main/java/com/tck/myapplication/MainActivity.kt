@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.tck.myapplication.databinding.ActivityMainBinding
+import com.tck.myapplication.lessonOneTwo.LessonOneTwo
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.LessonOnePointTwo.setOnClickListener {
-
+            startActivity(LessonOneTwo.newIntent(this))
         }
 
         binding.LessonOnePointThree.setOnClickListener {

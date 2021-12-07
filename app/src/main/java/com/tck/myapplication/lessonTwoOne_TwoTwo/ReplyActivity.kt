@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.ActionBar
 import androidx.databinding.DataBindingUtil
 import com.tck.myapplication.R
 import com.tck.myapplication.databinding.ActivityReplyBinding
@@ -23,7 +24,7 @@ class ReplyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityReplyBinding = DataBindingUtil.setContentView(this,R.layout.activity_reply)
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         binding.replyMessage.text = intent.getStringExtra(EXTRA_MESSAGE)
 
         binding.buttonReply.setOnClickListener {

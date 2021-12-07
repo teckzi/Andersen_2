@@ -9,9 +9,9 @@
     <string name="Lesson2_3">2.3: Implicit intents</string>
     <string name="hello_world">Hello World</string>
     <string name="button_label_count">Count</string>
-    <string name="button_label_toast">Toast</string>
+    <string name="button_label_toast">Say \nHello</string>
     <string name="count_initial_value">0</string>
-    <string name="toast_message">Hello Toast!</string>
+    <string name="toast_message">Hello Count</string>
     <string name="article_title">Beatles Anthology Vol. 1</string>
     <string name="article_subtitle">Behind That Locked Door: Beatles Rarities!</string>
     <string name="article_text">In a vault deep inside Abbey Road Studios in London — protected by an unmarked, triple-locked, police-alarmed door — are something like 400 hours of unreleased Beatles recordings, starting from June 2, 1962 and ending with the very last tracks recorded for the <i>Let It Be</i> album. The best of the best were released by Apple Records in the form of the 3-volume Anthology series.
@@ -53,4 +53,7 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
 
     <string name="edittext_share">\'Twas brillig and the slithy toves</string>
     <string name="button_share">Share This Text</string>
+    <string name="set_count_to_zero">Set count to zero</string>
+    <string name="zero">Zero</string>
+    <string name="homework_2_2">2.2 Homework</string>
 </resources>

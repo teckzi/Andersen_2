@@ -41,6 +41,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Lesson2_1"
                 android:paddingTop="8dp"/>
+
+            <Button
+                android:id="@+id/HomeworkLessonTwoPointTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/homework_2_2"
+                android:paddingTop="8dp"/>
+
             <Button
                 android:id="@+id/LessonTwoPointThree"
                 android:layout_width="match_parent"

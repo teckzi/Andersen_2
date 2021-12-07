@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.tck.myapplication.R
 import com.tck.myapplication.databinding.ActivityLessonOneTwoBinding
@@ -15,26 +15,35 @@ class LessonOneTwo : AppCompatActivity() {
             return Intent(packageContext, LessonOneTwo::class.java)
         }
     }
-
     private var count = 0
+    private lateinit var binding: ActivityLessonOneTwoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val countSave = savedInstanceState?.getInt("countInt")
         count = countSave ?: 0
-
-        val binding: ActivityLessonOneTwoBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_lesson_one_two)
-
-        binding.showCount.text = count.toString()
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_lesson_one_two)
+        countUpdate()
 
         binding.buttonToast.setOnClickListener {
-            Toast.makeText(this, R.string.toast_message, Toast.LENGTH_SHORT).show()
+            startActivity(HomeworkLessonTwoOne.newIntent(this,count))
         }
         binding.buttonCount.setOnClickListener {
             count++
-            binding.showCount.text = count.toString()
+            countUpdate()
         }
+        binding.zeroButton.setOnClickListener {
+            count = 0
+            countUpdate()
+        }
+    }
+
+    private fun countUpdate(){
+        binding.showCount.text = count.toString()
+        if (count == 0) binding.zeroButton.background.setTint(ContextCompat.getColor(this, R.color.grey))
+        else binding.zeroButton.background.setTint(ContextCompat.getColor(this, R.color.pink))
+        if (count% 2 == 0 && count != 0) binding.buttonCount.background.setTint(ContextCompat.getColor(this, R.color.MediumTurquoise))
+        else binding.buttonCount.background.setTint(ContextCompat.getColor(this, R.color.DarkSlateBlue))
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

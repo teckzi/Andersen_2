@@ -19,5 +19,9 @@ class LessonOneOne : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lesson_one_one)
         Log.d(TAG,"Hello World")
+        Log.e(TAG,"Error")
+        Log.w(TAG,"Warn")
+        Log.i(TAG,"Info")
+
     }
 }
